@@ -1,0 +1,51 @@
+.menu
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+    background: $text-dark
+    z-index: 10
+    padding: 100px 0 50px
+    display: flex
+    transform: translateY(-100%)
+    transition: transform .8s ease-in-out, opacity 1s ease-in-out
+    opacity: 0
+    &::after
+        position: absolute
+        content: ''
+        width: 490px
+        height: 620px
+        right: -270px
+        top: -110px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(500px)
+        border-radius: 12px
+        transform: rotate(-20deg)
+        z-index: -1
+    &.opened
+        transform: translateY(0)
+        opacity: 1
+    &__container
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    &__hero
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__list
+    &__item
+        font-size: 18px
+        line-height: 1.25
+        text-align: center
+        padding: 15px 0
+        & a
+            color: $text-light
+            transition: color .3s ease
+        &:hover
+            & a
+                color: #fff
+    &__btn
+        width: 100%
