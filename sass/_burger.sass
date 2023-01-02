@@ -1,0 +1,38 @@
+.burger
+    position: relative
+    cursor: pointer
+    overflow: hidden
+    width: 23px
+    height: 16px
+    &__stick
+        position: absolute
+        height: 2px
+        width: 23px
+        background-color: #fff
+        transition: transform ease-in-out, width ease-in-out
+        transition-duration: .2s
+        &:nth-child(1)
+            top: 0
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) 
+            top: 0
+            bottom: 0
+            margin: auto
+        &:nth-child(5)
+            bottom: 0
+
+.burger.active .burger__stick:nth-child(even)
+  transition-delay: var(--transition-duration)
+
+.burger:not(.active) .burger__stick:nth-child(odd)
+  transition-delay: var(--transition-duration)
+
+.burger.active .burger__stick:nth-child(odd)
+  width: 0
+
+.burger.active .burger__stick:nth-child(2)
+  transform: rotate(45deg)
+
+.burger.active .burger__stick:nth-child(4)
+  transform: rotate(-45deg)
