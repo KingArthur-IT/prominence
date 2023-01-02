@@ -1,0 +1,88 @@
+.baner
+    position: relative
+    min-height: 100vh
+    padding: 100px 0
+    display: flex
+    overflow-x: hidden
+    &::after
+        content: ''
+        position: absolute
+        width: 490px
+        height: 620px
+        right: -140px
+        top: -300px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(232px)
+        border-radius: 20px
+        transform: rotate(-19.96deg)
+        z-index: -1
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+    &__container
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+    &__title
+        font-family: 'Bebas Neue'
+        font-weight: 700
+        line-height: 1
+        color: #FFFFFF
+        margin-bottom: 20px
+        max-width: 580px
+    &__subtitle
+        font-size: 20px
+        line-height: 1.25
+        color: $text-light
+        margin-bottom: 50px
+        max-width: 510px
+
+@media screen and (max-width: 1440px)
+    .baner
+        &__img
+            width: 56%
+
+@media screen and (max-width: 1024px)
+    .baner
+        &::after
+            right: -240px
+            top: -400px
+        &__title
+            width: 70%
+
+@media screen and (max-width: 768px)
+    .baner
+        &__subtitle
+            font-size: 18px
+@media screen and (max-width: 580px)
+    .baner
+        flex-direction: column
+        padding-top: 0
+        &__img
+            position: relative
+            align-self: end
+            width: 90%
+        &__title
+            width: 80%
+
+@media screen and (max-width: 480px)
+    .baner
+        &__img
+            width: 100%
+
+@media screen and (max-width: 425px)
+    .baner
+        &::after
+            width: 300px
+            height: 380px
+            right: -60px
+            top: -80px
+            filter: blur(140px)
+        &__btn
+            & button
+                font-size: 15px
+                min-width: 130px
+            & div
+                font-size: 14px

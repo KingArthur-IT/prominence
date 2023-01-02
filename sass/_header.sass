@@ -4,8 +4,9 @@
     top: 0
     left: 0
     right: 0
+    z-index: 10
     &__hero
-        padding: 43px 0 10px
+        padding: 43px 0 20px
         display: flex
         align-items: center
     &__nav
@@ -41,8 +42,10 @@
 
 @media screen and (max-width: 768px)
     .header
+        background: rgba(25, 27, 31, 0.6)
+        backdrop-filter: blur(7.5px)
         &__hero
-            padding: 30px 0 10px
+            padding: 30px 0 20px
         &__burger
             display: block
         &__menu

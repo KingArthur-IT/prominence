@@ -78,9 +78,49 @@ picture img {
   color: #fff;
 }
 
+.btn-with-label {
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 80px;
+  padding: 6px 25px 6px 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn-with-label button {
+  background: linear-gradient(103.79deg, #176DAE 6.82%, #82E1E2 130.84%);
+  border-radius: 80px;
+  padding: 10px 27px;
+  color: #fff;
+  margin-right: 16px;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.btn-with-label button:is(:hover, :active) {
+  color: #191B1F;
+  background: #fff;
+}
+
+.btn-with-label div {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #BCBCBC;
+}
+
 .text {
   font-size: 17px;
   color: #fff;
+}
+
+.title {
+  font-size: 60px;
 }
 
 .d-none {
@@ -101,15 +141,27 @@ picture img {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 52px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 30px;
+  }
+  .title {
+    font-size: 42px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .container {
     padding: 0 10px;
+  }
+  .title {
+    font-size: 35px;
   }
 }
 
@@ -119,10 +171,11 @@ picture img {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
 .header__hero {
-  padding: 43px 0 10px;
+  padding: 43px 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,8 +243,13 @@ picture img {
 }
 
 @media screen and (max-width: 768px) {
+  .header {
+    background: rgba(25, 27, 31, 0.6);
+    -webkit-backdrop-filter: blur(7.5px);
+            backdrop-filter: blur(7.5px);
+  }
   .header__hero {
-    padding: 30px 0 10px;
+    padding: 30px 0 20px;
   }
   .header__burger {
     display: block;
@@ -267,4 +325,132 @@ picture img {
 .burger.active .burger__stick:nth-child(4) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.baner {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.baner::after {
+  content: '';
+  position: absolute;
+  width: 490px;
+  height: 620px;
+  right: -140px;
+  top: -300px;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  -webkit-filter: blur(232px);
+          filter: blur(232px);
+  border-radius: 20px;
+  -webkit-transform: rotate(-19.96deg);
+          transform: rotate(-19.96deg);
+  z-index: -1;
+}
+
+.baner__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.baner__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.baner__title {
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+  line-height: 1;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.baner__subtitle {
+  font-size: 20px;
+  line-height: 1.25;
+  color: #BCBCBC;
+  margin-bottom: 50px;
+  max-width: 510px;
+}
+
+@media screen and (max-width: 1440px) {
+  .baner__img {
+    width: 56%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .baner::after {
+    right: -240px;
+    top: -400px;
+  }
+  .baner__title {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .baner__subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .baner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+  }
+  .baner__img {
+    position: relative;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    width: 90%;
+  }
+  .baner__title {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .baner__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .baner::after {
+    width: 300px;
+    height: 380px;
+    right: -60px;
+    top: -80px;
+    -webkit-filter: blur(140px);
+            filter: blur(140px);
+  }
+  .baner__btn button {
+    font-size: 15px;
+    min-width: 130px;
+  }
+  .baner__btn div {
+    font-size: 14px;
+  }
 }
