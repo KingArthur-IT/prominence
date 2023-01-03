@@ -1,0 +1,129 @@
+.services-cards-list
+    width: calc(100% + 50px)
+    transform: translateX(-25px)
+.services-card
+    padding: 0 25px
+    flex-basis: 33.333%
+    &__hero
+        position: relative
+        padding: 120px 17px 35px 30px
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: space-between
+    &__icon
+        position: absolute
+        top: 0
+        right: 10px
+        transform: translateY(-50%)
+        &.distorted
+            transform: translateY(-37%) rotate(-34deg)
+        &.knot
+            transform: translateY(-50%) rotate(-43deg)
+            right: -10px
+        &.icosahedron
+            top: 15px
+    &__title
+        font-family: 'Bebas Neue'
+        font-weight: 500
+        font-size: 27px
+        line-height: 1
+        background: linear-gradient(103.79deg, #176DAE 6.82%, #82E1E2 130.84%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        margin-bottom: 15px
+    &__text
+        font-size: 17px
+        line-height: 1.25
+        color: $text-dark
+        margin-bottom: 34px
+    &__btn
+        background: #FFFFFF
+        border: 1px solid $text-dark
+        border-radius: 80px
+        padding: 7px 20px
+        color: $text-dark
+        &:hover
+            background: linear-gradient(103.12deg, #176DAE -7.88%, #82E1E2 103.78%)
+            color: #fff
+            border: 1px solid #fff
+            & svg 
+                transform: translateX(2px)
+                & path
+                    fill: #fff
+        & svg
+            margin-left: 10px
+            transform: translateX(0)
+            transition: transform .2s ease
+    &:nth-child(1) .card__bg
+        transform: rotate(5deg)
+    &:nth-child(2) .card__bg
+        transform: rotate(-4deg)
+    &:nth-child(3) .card__bg
+        transform: rotate(-7deg)
+        
+@media screen and (max-width: 1240px)
+    .services
+        &__title-wrapper
+            margin-bottom: 100px
+
+@media screen and (max-width: 1024px)
+    .services-cards-list
+        width: calc(100% + 24px)
+        transform: translateX(-12px)
+    .services-card
+        padding: 0 12px
+        &__hero
+            padding: 100px 20px 35px 20px
+        &__icon
+            width: 140px
+        &:nth-child(1) .card__bg
+            transform: rotate(3deg)
+        &:nth-child(2) .card__bg
+            transform: rotate(-2deg)
+        &:nth-child(3) .card__bg
+            transform: rotate(-3deg)
+
+@media screen and (max-width: 768px)
+    .services
+        &__title-wrapper
+            margin-bottom: 60px
+    .services-cards-list
+        width: 100%
+        transform: translateX(0)
+        flex-direction: column
+    .services-card
+        padding: 0
+        flex-basis: 100%
+        margin-bottom: 80px
+        &__hero
+            padding: 80px 20px 35px 20px
+
+@media screen and (max-width: 600px)
+    .services-card
+        &__icon
+            &.knot
+                top: -12px
+            &.icosahedron
+                top: 0
+        &:nth-child(1) .card__bg
+            transform: rotate(4deg)
+        &:nth-child(2) .card__bg
+            transform: rotate(-4deg)
+        &:nth-child(3) .card__bg
+            transform: rotate(-7deg)
+
+@media screen and (max-width: 425px)
+    .services-card
+        &__title
+            font-size: 25px
+            margin-bottom: 20px
+        &__text
+            font-size: 15px
+            margin-bottom: 60px
+        
+
+        
