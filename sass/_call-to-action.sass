@@ -1,0 +1,67 @@
+.call-to-action
+    padding: 75px 0
+    &__hero
+        padding-left: 320px
+    &__title
+        margin-bottom: 40px
+        font-size: 80px
+    &__subtitle
+        color: #BCBCBC
+        & .offset
+            display: block
+            padding-left: 330px
+    &__btn
+        font-family: 'Plus Jakarta Sans'
+        font-weight: normal
+        margin-top: 40px
+        margin-left: 330px
+
+@media screen and (max-width: 1340px)
+    .call-to-action
+        &__hero
+            padding-left: 200px
+
+@media screen and (max-width: 1240px)
+    .call-to-action
+        &__hero
+            padding-left: 0px
+
+@media screen and (max-width: 1024px)
+    .call-to-action
+        &__title
+            font-size: 72px
+
+@media screen and (max-width: 860px)
+    .call-to-action
+        &__subtitle
+            & .offset
+                padding-left: 200px
+        &__btn
+            margin-left: 200px
+
+@media screen and (max-width: 768px)
+    .call-to-action
+        &__title
+            font-size: 60px
+            margin-bottom: 25px
+
+@media screen and (max-width: 680px)
+    .call-to-action
+        &__subtitle
+            & .offset
+                padding-left: 25px
+        &__btn
+            margin-left: 25px
+
+@media screen and (max-width: 425px)
+    .call-to-action
+        &__title
+            font-size: 45px
+            margin-bottom: 15px
+        &__subtitle
+            & .offset
+                text-align: right
+        &__btn
+            margin-left: 0px
+            & .btn
+                min-width: 130px
