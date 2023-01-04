@@ -1,0 +1,88 @@
+.studies-list
+    width: calc(100% + 50px)
+    transform: translateX(-25px)
+    flex-wrap: wrap
+.studies-card
+    padding: 0 25px
+    flex-basis: 50%
+    min-height: 360px
+    margin-bottom: 50px
+    &__hero
+        height: 100%
+        min-height: 360px
+        background: rgba(217, 217, 217, 0.1)
+        border-radius: 10px
+        padding: 40px 30px 30px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+    &__title
+        padding-left: 30px
+        font-weight: 700
+        font-size: 15px
+        line-height: 1.25
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        font-feature-settings: 'liga' off
+        color: #BCBCBC
+        margin-bottom: 40px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 16px
+            height: 16px
+            background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+            border-radius: 50%
+    &__text
+        font-weight: 700
+        font-size: 23px
+        line-height: 1.25
+        font-feature-settings: 'liga' off
+        color: #FFFFFF
+        margin-bottom: 30px
+    &__btn
+        display: flex
+        align-items: center
+        background: transparent
+        & span
+            font-size: 17px
+            line-height: 1.25
+            color: #FFFFFF
+            margin-right: 15px
+        & svg
+            transition: all .2s ease
+        &:hover
+            & svg
+                transform: rotate(-45deg) translateY(4px)
+                & path
+                    fill: #fff
+
+@media screen and (max-width: 1024px)
+    .studies-list
+        width: calc(100% + 24px)
+        transform: translateX(-12px)
+    .studies-card
+        padding: 0 12px
+        margin-bottom: 24px
+
+@media screen and (max-width: 768px)
+    .studies-list
+        width: 100%
+        transform: translateX(0)
+        flex-direction: column
+    .studies-card
+        padding: 0
+        margin-bottom: 40px
+
+@media screen and (max-width: 425px)
+    .studies-card
+        &__hero
+            padding: 40px 20px 30px
+        &__title
+            font-size: 14px
+        &__text
+            font-size: 20px

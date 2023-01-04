@@ -138,6 +138,7 @@ picture img {
   font-weight: 700;
   line-height: 1;
   color: #FFFFFF;
+  letter-spacing: 1px;
 }
 
 .cards-list {
@@ -1033,5 +1034,227 @@ picture img {
   }
   .reviews__text {
     font-size: 15px;
+  }
+}
+
+.started-steps-list {
+  width: calc(100% + 50px);
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+}
+
+.started-card {
+  padding: 0 25px;
+  -ms-flex-preferred-size: 33.333%;
+      flex-basis: 33.333%;
+}
+
+.started-card__hero {
+  position: relative;
+  padding: 70px 30px 50px 30px;
+  height: 100%;
+}
+
+.started-card__title {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  background: linear-gradient(103.79deg, #176DAE 6.82%, #82E1E2 130.84%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 15px;
+  letter-spacing: 0.001px;
+}
+
+.started-card__text {
+  font-size: 17px;
+  line-height: 1.25;
+  color: #191B1F;
+}
+
+@media screen and (max-width: 1024px) {
+  .started-steps-list {
+    width: calc(100% + 24px);
+    -webkit-transform: translateX(-12px);
+            transform: translateX(-12px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .started-card {
+    padding: 0 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .started-steps-list {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .started-card {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .started-card__hero {
+    padding: 50px 20px 40px 20px;
+  }
+  .started-card__title {
+    font-size: 80px;
+  }
+  .started-card__text {
+    font-size: 15px;
+  }
+}
+
+.studies-list {
+  width: calc(100% + 50px);
+  -webkit-transform: translateX(-25px);
+          transform: translateX(-25px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.studies-card {
+  padding: 0 25px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  min-height: 360px;
+  margin-bottom: 50px;
+}
+
+.studies-card__hero {
+  height: 100%;
+  min-height: 360px;
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 10px;
+  padding: 40px 30px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.studies-card__title {
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  color: #BCBCBC;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.studies-card__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  border-radius: 50%;
+}
+
+.studies-card__text {
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 1.25;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+.studies-card__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+}
+
+.studies-card__btn span {
+  font-size: 17px;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin-right: 15px;
+}
+
+.studies-card__btn svg {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.studies-card__btn:hover svg {
+  -webkit-transform: rotate(-45deg) translateY(4px);
+          transform: rotate(-45deg) translateY(4px);
+}
+
+.studies-card__btn:hover svg path {
+  fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .studies-list {
+    width: calc(100% + 24px);
+    -webkit-transform: translateX(-12px);
+            transform: translateX(-12px);
+  }
+  .studies-card {
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .studies-list {
+    width: 100%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .studies-card {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .studies-card__hero {
+    padding: 40px 20px 30px;
+  }
+  .studies-card__title {
+    font-size: 14px;
+  }
+  .studies-card__text {
+    font-size: 20px;
   }
 }
