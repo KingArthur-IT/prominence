@@ -8,6 +8,12 @@
         position: relative
         padding: 70px 30px 50px 30px
         height: 100%
+    &:nth-child(1) .card__bg
+        transform: rotate(5deg)
+    &:nth-child(2) .card__bg
+        transform: rotate(-4deg)
+    &:nth-child(3) .card__bg
+        transform: rotate(-7deg)
     &__title
         font-family: 'Bebas Neue'
         font-style: normal
@@ -34,6 +40,13 @@
         flex-direction: column
     .started-card
         padding: 0 12px
+        margin-bottom: 40px
+        &:nth-child(1) .card__bg
+            transform: rotate(3deg)
+        &:nth-child(2) .card__bg
+            transform: rotate(-2deg)
+        &:nth-child(3) .card__bg
+            transform: rotate(-3deg)
 
 @media screen and (max-width: 768px)
     .started-steps-list
@@ -41,7 +54,17 @@
         transform: translateX(0)
     .started-card
         padding: 0
-        margin-bottom: 40px
+    .section-padding
+        padding: 50px 0
+
+@media screen and (max-width: 600px)
+    .started-card
+        &:nth-child(1) .card__bg
+            transform: rotate(4deg)
+        &:nth-child(2) .card__bg
+            transform: rotate(-4deg)
+        &:nth-child(3) .card__bg
+            transform: rotate(-7deg)
 
 @media screen and (max-width: 425px)
     .started-card

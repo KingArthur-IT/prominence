@@ -55,6 +55,10 @@ picture img {
   margin-top: 20px;
 }
 
+.section-padding {
+  padding: 75px 0;
+}
+
 .btn {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -121,10 +125,24 @@ picture img {
   background: #fff;
 }
 
+.btn-with-label button:is(:hover, :active) ~ div svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
 .btn-with-label div {
   font-size: 16px;
   line-height: 1.25;
   color: #BCBCBC;
+}
+
+.btn-with-label div svg {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
 .text {
@@ -609,6 +627,10 @@ picture img {
   width: 100%;
 }
 
+.services {
+  padding-bottom: 50px;
+}
+
 .services-cards-list {
   width: calc(100% + 50px);
   -webkit-transform: translateX(-25px);
@@ -822,10 +844,6 @@ picture img {
   }
 }
 
-.call-to-action {
-  padding: 75px 0;
-}
-
 .call-to-action__hero {
   padding-left: 320px;
 }
@@ -842,6 +860,10 @@ picture img {
 .call-to-action__subtitle .offset {
   display: block;
   padding-left: 330px;
+}
+
+.call-to-action__subtitle .offset br {
+  display: none;
 }
 
 .call-to-action__btn {
@@ -887,20 +909,30 @@ picture img {
 
 @media screen and (max-width: 680px) {
   .call-to-action__subtitle .offset {
-    padding-left: 25px;
+    text-align: right;
+    padding-left: 0;
+  }
+  .call-to-action__subtitle .offset span {
+    display: block;
   }
   .call-to-action__btn {
     margin-left: 25px;
   }
 }
 
+@media screen and (max-width: 475px) {
+  .call-to-action__subtitle .offset br {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .call-to-action__title {
-    font-size: 45px;
+    font-size: 44px;
     margin-bottom: 15px;
   }
-  .call-to-action__subtitle .offset {
-    text-align: right;
+  .call-to-action__subtitle {
+    font-size: 32px;
   }
   .call-to-action__btn {
     margin-left: 0px;
@@ -1055,6 +1087,21 @@ picture img {
   height: 100%;
 }
 
+.started-card:nth-child(1) .card__bg {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.started-card:nth-child(2) .card__bg {
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+}
+
+.started-card:nth-child(3) .card__bg {
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+}
+
 .started-card__title {
   font-family: 'Bebas Neue';
   font-style: normal;
@@ -1089,6 +1136,19 @@ picture img {
   }
   .started-card {
     padding: 0 12px;
+    margin-bottom: 40px;
+  }
+  .started-card:nth-child(1) .card__bg {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  .started-card:nth-child(2) .card__bg {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  .started-card:nth-child(3) .card__bg {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
   }
 }
 
@@ -1100,7 +1160,24 @@ picture img {
   }
   .started-card {
     padding: 0;
-    margin-bottom: 40px;
+  }
+  .section-padding {
+    padding: 50px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .started-card:nth-child(1) .card__bg {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  .started-card:nth-child(2) .card__bg {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  .started-card:nth-child(3) .card__bg {
+    -webkit-transform: rotate(-7deg);
+            transform: rotate(-7deg);
   }
 }
 

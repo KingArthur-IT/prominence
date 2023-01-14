@@ -44,6 +44,8 @@ picture img
         line-height: 1.25
         color: $text-light
         margin-top: 20px
+    &-padding
+      padding: 75px 0
 
 .btn
     appearance: none
@@ -83,10 +85,15 @@ picture img
     &:is(:hover, :active)
       color: $text-dark
       background: #fff
+      & ~ div svg
+        transform: translateX(5px)
   & div
     font-size: 16px
     line-height: 1.25
     color: $text-light
+    & svg
+      transform: translateX(0)
+      transition: transform .3s ease
 
 .text
   font-size: 17px
