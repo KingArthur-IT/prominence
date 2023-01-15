@@ -56,15 +56,28 @@
         color: $text-dark
         margin-bottom: 34px
     &__btn
+        position: relative
         background: #FFFFFF
         border: 1px solid $text-dark
         border-radius: 80px
         padding: 7px 20px
         color: $text-dark
-        &:hover
+        &::before
+            position: absolute
+            content: ''
+            top: -1px
+            bottom: -1px
+            left: -1px
+            right: -1px
+            border-radius: 80px
             background: linear-gradient(103.12deg, #176DAE -7.88%, #82E1E2 103.78%)
+            opacity: 0
+            transition: opacity .3s ease
+        &:hover
             color: #fff
             border: 1px solid #fff
+            &::before
+                opacity: 1
             & svg 
                 transform: translateX(2px)
                 & path

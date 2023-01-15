@@ -9,7 +9,7 @@ button?.addEventListener("click", () => {
 //ACCORDEON
 var reviewsHomeMoreBtn = document.querySelector(".reviews__more-btn");
 
-reviewsHomeMoreBtn.addEventListener('click', () => {
+reviewsHomeMoreBtn?.addEventListener('click', () => {
   reviewsHomeMoreBtn.classList.toggle('active');
   const panel = document.querySelector('.reviews__list .more-list')
   if (panel.style.maxHeight) {
