@@ -23,4 +23,11 @@ $(document).ready(function(){
     $('.studies-list-controls .left-arrow').click(function() {
       homeStudies.trigger('next.owl.carousel');
     })
+
+    homeStudies.on('changed.owl.carousel',function(property){
+      const percent = 100 * (1. * property.item.index / (property.item.count - 1))
+      const line = document.querySelector('.studies-list-controls .line-wrapper .line')
+      if (line)
+        line.style.width = percent + '%'
+  });
 });

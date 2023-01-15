@@ -2273,12 +2273,20 @@ picture img {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
-  .studies-list-controls .line {
+  .studies-list-controls .line-wrapper {
+    position: relative;
     height: 2px;
     background: #fff;
     width: 100%;
     margin: 0 12px;
     max-width: 500px;
+  }
+  .studies-list-controls .line-wrapper .line {
+    background: #5AB6CF;
+    height: 100%;
+    width: 0;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
   }
 }
 
