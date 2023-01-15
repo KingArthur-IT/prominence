@@ -1,6 +1,7 @@
 .started-steps-list
     width: calc(100% + 50px)
     transform: translateX(-25px)
+    z-index: 2
 .started-card
     padding: 0 25px
     flex-basis: 33.333%
@@ -8,11 +9,11 @@
         position: relative
         padding: 70px 30px 50px 30px
         height: 100%
-    &:nth-child(1) .card__bg
-        transform: rotate(5deg)
     &:nth-child(2) .card__bg
-        transform: rotate(-4deg)
+        transform: rotate(5deg)
     &:nth-child(3) .card__bg
+        transform: rotate(-4deg)
+    &:nth-child(4) .card__bg
         transform: rotate(-7deg)
     &__title
         font-family: 'Bebas Neue'
@@ -32,21 +33,155 @@
         font-size: 17px
         line-height: 1.25
         color: $text-dark
+.steps-btn
+    margin-left: 320px
+    transform: translate(-70%, -40px)
+.steps-home-big-design
+    position: absolute
+    background: url('../assets/home/steps.png') no-repeat
+    background-size: cover
+    width: 360px
+    height: 360px
+    left: -100px
+    top: -190px
+    mix-blend-mode: multiply
+    transform: rotate(-13deg)
+    pointer-events: none
+.steps-home-small-design
+    position: absolute
+    background: url('../assets/home/steps.png') no-repeat
+    background-size: cover
+    width: 250px
+    height: 250px
+    left: 50%
+    top: 51%
+    mix-blend-mode: multiply
+    transform: translateX(-50%)
+    pointer-events: none
+.steps-home-cards-design
+    position: absolute
+    background: url('../assets/home/steps-cards.png') no-repeat
+    background-size: cover
+    filter: drop-shadow(20px -10px 27px #172A50A6)
+    width: 64vw
+    height: 22.4vw
+    right: calc(720px - 50vw - 90px)
+    top: 0
+    transform: translateY(-40%)
+    z-index: 3
+    pointer-events: none
+.steps-card-ball
+    position: absolute
+    width: 106px
+    height: 106px
+    right: 40px
+    top: -60px
+    background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+    filter: drop-shadow(20px 0px 20px #172A50A6)
+    border-radius: 50%
+    transform: rotate(180deg)
+    z-index: 5
+    pointer-events: none
+.started-card-mob1
+    display: none
+.started-card-mob2
+    display: none
+
+.home-page-steps
+    &::before
+        content: ''
+        position: absolute
+        width: 660px
+        height: 465px
+        left: -140px
+        top: 100px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(382px)
+        border-radius: 20px
+        transform: rotate(-20deg)
+        z-index: 1
+        pointer-events: none
+
+
+@media screen and (max-width: 1400px)
+    .steps-home-cards-design
+        right: - 90px
+
+@media screen and (max-width: 1340px)
+    .steps-home-cards-design
+        width: 71vw
+        height: 26.4vw
+    .steps-btn
+        margin-left: 200px
+
+@media screen and (max-width: 1240px)
+    .steps-home-big-design
+        width: 300px
+        height: 300px
+        left: -100px
+        top: -120px
+    .steps-home-small-design
+        left: 25%
+        top: 46%
+        transform: translateX(0)
+    .steps-home-cards-design
+        width: 89vw
+        height: 33vw
+    .steps-btn
+        margin-left: 0
+        transform: translate(0, 0)
+        margin: auto
+        margin-top: 60px
 
 @media screen and (max-width: 1024px)
+    .steps-home-cards-design
+        display: none
     .started-steps-list
         width: calc(100% + 24px)
         transform: translateX(-12px)
         flex-direction: column
     .started-card
         padding: 0 12px
-        margin-bottom: 40px
-        &:nth-child(1) .card__bg
-            transform: rotate(3deg)
+        margin-bottom: 60px
         &:nth-child(2) .card__bg
-            transform: rotate(-2deg)
+            transform: rotate(3deg)
         &:nth-child(3) .card__bg
+            transform: rotate(-2deg)
+        &:nth-child(4) .card__bg
             transform: rotate(-3deg)
+    .steps-home-small-design
+        left: auto
+        right: -100px
+        top: auto
+        bottom: -10px
+    .steps-card-ball
+        width: 90px
+        height: 90px
+        right: auto
+        left: 140px
+        top: -40px
+    .started-card-mob1
+        display: block
+        position: absolute
+        background: url('../assets/home/steps-mob-1.png') no-repeat
+        background-size: cover
+        height: 150px
+        width: 105px
+        left: -30px
+        top: -50px
+        z-index: 5
+        pointer-events: none
+    .started-card-mob2
+        display: block
+        position: absolute
+        background: url('../assets/home/steps-mob-2.png') no-repeat
+        background-size: cover
+        height: 440px
+        width: 160px
+        right: -30px
+        bottom: -210px
+        z-index: 6
+        pointer-events: none
 
 @media screen and (max-width: 768px)
     .started-steps-list
@@ -54,16 +189,31 @@
         transform: translateX(0)
     .started-card
         padding: 0
+        margin-bottom: 40px
     .section-padding
         padding: 50px 0
+    .steps-home-big-design
+        top: -160px
+    .steps-home-small-design
+        width: 120px
+        height: 120px
+        right: -40px
+    .steps-btn
+        margin-top: 40px
+    .steps-card-ball
+        width: 68px
+        height: 68px
+        right: auto
+        left: 100px
+        top: -30px
 
 @media screen and (max-width: 600px)
     .started-card
-        &:nth-child(1) .card__bg
-            transform: rotate(4deg)
         &:nth-child(2) .card__bg
-            transform: rotate(-4deg)
+            transform: rotate(4deg)
         &:nth-child(3) .card__bg
+            transform: rotate(-4deg)
+        &:nth-child(4) .card__bg
             transform: rotate(-7deg)
 
 @media screen and (max-width: 425px)
@@ -74,3 +224,27 @@
             font-size: 80px
         &__text
             font-size: 15px
+    .steps-home-big-design
+        width: 260px
+        height: 260px
+        left: -120px
+    .home-page-steps
+        &::before
+            width: 470px
+            height: 300px
+            left: auto
+            right: -200px
+            top: -50px
+            filter: blur(200px)
+    .steps-card-ball
+        left: 70px
+    .started-card-mob1
+        height: 110px
+        width: 75px
+        left: -10px
+        top: -40px
+    .started-card-mob2
+        height: 285px
+        width: 100px
+        right: -10px
+        bottom: -150px

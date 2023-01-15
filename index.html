@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./style/style.min.css">
 </head>
 <body>
-    <div class="menu">
+    <div style="transform: translateY(-100%)" class="menu">
         <div class="container menu__container">
             <ul class="menu__list">
                 <li class="menu__item">
@@ -188,6 +188,7 @@
             </div>
         </section>
         <section class="section section-padding call-to-action">
+            <img src="./assets/home/rezult.png" class="call-to-action__rez-bg">
             <div class="container">
                 <div class="call-to-action__hero">
                     <h2 class="title call-to-action__title">Need a guaranteed result? </h2>
@@ -202,7 +203,8 @@
                 </div>
             </div>
         </section>
-        <section class="section section-padding reviews">
+        <section class="section section-padding reviews home-page-reviews">
+            <div class="reviews__home-bg"></div>
             <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="title">Don’t take it from us</h2>
@@ -484,13 +486,18 @@
                 </ul>
             </div>
         </section>
-        <section class="section section-padding">
+        <section class="section section-padding home-page-steps">
+            <div class="steps-home-big-design"></div>
+            <div class="steps-home-small-design"></div>
             <div class="container">
                 <div class="section__title-wrapper">
                     <h2 class="title">Get Started in 3 easy steps</h2>
                 </div>
                 <ul class="cards-list started-steps-list">
+                    <div class="steps-home-cards-design"></div>
                     <li class="started-card">
+                        <div class="started-card-mob1"></div>
+                        <div class="started-card-mob2"></div>
                         <div class="card started-card__hero">
                             <div class="card__bg"></div>
                             <div class="started-card__title">01</div>
@@ -499,7 +506,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="started-card">
+                    <li class="started-card z-5">
                         <div class="card started-card__hero">
                             <div class="card__bg"></div>
                             <div class="started-card__title">02</div>
@@ -508,7 +515,8 @@
                             </p>
                         </div>
                     </li>
-                    <li class="started-card">
+                    <li class="started-card z-5">
+                        <div class="steps-card-ball"></div>
                         <div class="card started-card__hero">
                             <div class="card__bg"></div>
                             <div class="started-card__title">03</div>
@@ -518,6 +526,7 @@
                         </div>
                     </li>
                 </ul>
+                <button class="btn circle-btn steps-btn">Leave a request</button>
             </div>
         </section>
         <section class="section section-padding studies">

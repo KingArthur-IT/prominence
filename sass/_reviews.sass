@@ -1,10 +1,37 @@
+.home-page-reviews
+    &::before
+        content: ''
+        position: absolute
+        width: 525px
+        height: 360px
+        right: -240px
+        top: 200px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(327px)
+        border-radius: 20px
+        transform: rotate(-20deg)
+        z-index: 1
+        pointer-events: none
 .reviews
+    position: relative
+    &__home-bg
+        position: absolute
+        right: -110px
+        top: -20px
+        mix-blend-mode: multiply
+        background: url('../assets/home/reviews.png') no-repeat
+        background-size: cover
+        width: 510px
+        height: 500px
+        transform: rotate(-18deg)
+        pointer-events: none
     &__list
         padding-left: 320px
         display: flex
         flex-wrap: wrap
         width: calc(100% + 50px)
         transform: translateX(-25px)
+        z-index: 2
     &__item
         padding: 0 25px
         flex-basis: 33.333%
@@ -43,6 +70,7 @@
     .reviews
         &__list
             padding-left: 0
+
 @media screen and (max-width: 1024px)
     .reviews
         &__list
@@ -53,6 +81,11 @@
 
 @media screen and (max-width: 768px)
     .reviews
+        &__home-bg
+            width: 340px
+            height: 340px
+            right: -100px
+            top: -35px
         &__item
             flex-basis: 50%
             margin-bottom: 40px
@@ -60,6 +93,13 @@
                 margin-top: 0
             &:nth-child(5)
                 margin-top: 0
+    .home-page-reviews
+        &::before
+            width: 315px
+            height: 215px
+            right: -200px
+            top: 60px
+            filter: blur(200px)
 
 @media screen and (max-width: 480px)
     .reviews
@@ -73,6 +113,8 @@
 
 @media screen and (max-width: 425px)
     .reviews
+        &__home-bg
+            right: -140px
         &__title
             font-size: 20px
         &__stars

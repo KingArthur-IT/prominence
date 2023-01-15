@@ -1,5 +1,18 @@
 .services
     padding-bottom: 50px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        bottom: -300px
+        left: -425px
+        width: 555px
+        height: 545px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(267px)
+        border-radius: 20px
+        transform: rotate(20deg)
+        pointer-events: none
 .services-cards-list
     width: calc(100% + 50px)
     transform: translateX(-25px)
@@ -119,6 +132,14 @@
             transform: rotate(-7deg)
 
 @media screen and (max-width: 425px)
+    .services
+        padding-bottom: 100px
+        &::before
+            width: 350px
+            height: 300px
+            left: -175px
+            bottom: -200px
+            filter: blur(157px)
     .services-card
         &__title
             font-size: 25px
