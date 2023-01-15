@@ -108,6 +108,7 @@ picture img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  letter-spacing: 0;
 }
 
 .btn-with-label button {
@@ -182,6 +183,44 @@ picture img {
 }
 
 .circle-btn:hover {
+  background: #fff;
+  color: #191B1F;
+}
+
+.more-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(101.6deg, #176DAE 7.05%, #82E1E2 118.94%);
+  border-radius: 80px;
+  position: relative;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.more-btn::before {
+  content: '';
+  position: absolute;
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 90px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  top: -6px;
+  left: -6px;
+  -webkit-transition: background 0.3s ease, color .3s ease;
+  transition: background 0.3s ease, color .3s ease;
+}
+
+.more-btn:hover {
   background: #fff;
   color: #191B1F;
 }
@@ -1365,6 +1404,11 @@ picture img {
   z-index: 2;
 }
 
+.reviews__list.mobile {
+  visibility: hidden;
+  height: 0;
+}
+
 .reviews__item {
   padding: 0 25px;
   -ms-flex-preferred-size: 33.333%;
@@ -1417,6 +1461,10 @@ picture img {
   font-size: 17px;
   line-height: 1.25;
   color: #BCBCBC;
+}
+
+.reviews__more-btn {
+  display: none;
 }
 
 @media screen and (max-width: 1240px) {
@@ -1473,9 +1521,40 @@ picture img {
     width: 100%;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    visibility: hidden;
+    height: 0;
+  }
+  .reviews__list.mobile {
+    visibility: visible;
+    height: auto;
+  }
+  .reviews__list.mobile .more-list {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+  }
+  .reviews__more-btn .list-show {
+    display: inline;
+  }
+  .reviews__more-btn .list-hide {
+    display: none;
+  }
+  .reviews__more-btn.active .list-show {
+    display: none;
+  }
+  .reviews__more-btn.active .list-hide {
+    display: inline;
   }
   .reviews__item {
     padding: 0;
+  }
+  .reviews__more-btn {
+    width: calc( 100% - 20px);
+    margin: 20px 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

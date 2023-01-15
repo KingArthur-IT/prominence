@@ -75,6 +75,7 @@ picture img
   display: flex
   align-items: center
   width: fit-content
+  letter-spacing: 0
   & button
     background: linear-gradient(103.79deg, #176DAE 6.82%, #82E1E2 130.84%)
     border-radius: 80px
@@ -122,7 +123,31 @@ picture img
   &:hover
     background: #fff
     color: #191B1F
-
+.more-btn
+  display: flex
+  justify-content: center
+  align-items: center
+  background: linear-gradient(101.6deg, #176DAE 7.05%, #82E1E2 118.94%)
+  border-radius: 80px
+  position: relative
+  color: #fff
+  padding: 12px
+  text-align: center
+  z-index: 2
+  font-weight: 500
+  &::before
+    content: ''
+    position: absolute
+    background: rgba(217, 217, 217, 0.1)
+    border-radius: 90px
+    width: calc(100% + 12px)
+    height: calc(100% + 12px)
+    top: -6px
+    left: -6px
+    transition: background 0.3s ease, color .3s ease
+  &:hover
+    background: #fff
+    color: #191B1F
 
 .text
   font-size: 17px

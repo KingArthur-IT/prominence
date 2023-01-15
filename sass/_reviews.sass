@@ -32,6 +32,9 @@
         width: calc(100% + 50px)
         transform: translateX(-25px)
         z-index: 2
+        &.mobile
+            visibility: hidden
+            height: 0
     &__item
         padding: 0 25px
         flex-basis: 33.333%
@@ -65,6 +68,8 @@
         font-size: 17px
         line-height: 1.25
         color: $text-light
+    &__more-btn
+        display: none
 
 @media screen and (max-width: 1240px)
     .reviews
@@ -108,8 +113,31 @@
         &__list
             width: 100%
             transform: translateX(0)
+            visibility: hidden
+            height: 0
+            &.mobile
+                visibility: visible
+                height: auto
+                & .more-list
+                    max-height: 0
+                    overflow: hidden
+                    transition: max-height 0.2s ease-out
+        &__more-btn
+            & .list-show
+                display: inline
+            & .list-hide
+                display: none
+        &__more-btn.active
+            & .list-show
+                display: none
+            & .list-hide
+                display: inline
         &__item
             padding: 0
+        &__more-btn
+            width: calc( 100% - 20px )
+            margin: 20px 10px 0
+            display: flex
 
 @media screen and (max-width: 425px)
     .reviews
