@@ -3,6 +3,12 @@
     transform: translateX(-25px)
     flex-wrap: wrap
     z-index: 2
+    &-mobile
+        display: none !important
+        & .owl-stage
+            margin-left: -37px
+.studies-list-controls
+    display: none
 .studies-card
     padding: 0 25px
     flex-basis: 50%
@@ -165,8 +171,11 @@
         width: 100%
         transform: translateX(0)
         flex-direction: column
+        display: none
+        &-mobile
+            display: block !important
+            margin-bottom: 40px
     .studies-card
-        padding: 0
         margin-bottom: 40px
     .home-page-studies
         &__design-small
@@ -180,9 +189,24 @@
             top: 80px
         &__design-right-bottom
             display: none
+    .studies-list-controls
+        padding: 0 12px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        & .arrow
+            cursor: pointer
+            transform: scale(1.5)
+        & .line
+            height: 2px
+            background: #fff
+            width: 100%
+            margin: 0 12px
+            max-width: 500px
 
 @media screen and (max-width: 425px)
     .studies-card
+        padding: 0 5px
         &__hero
             padding: 40px 20px 30px
         &__title
@@ -195,3 +219,7 @@
             height: 100px
             right: 0
             top: 90px
+    .studies-list
+        &-mobile
+            & .owl-stage
+                margin-left: -10px

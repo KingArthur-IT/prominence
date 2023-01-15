@@ -22,9 +22,10 @@
         & a
             color: $text-light
             transition: color .3s ease
-        &:hover
+        &:is(:hover,:active)
             & a
-                color: #fff
+                color: #BCBCBC
+                border-bottom: 1px solid #BCBCBC
     &__btn
         margin-left: auto
     &__burger

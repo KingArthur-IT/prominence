@@ -20,8 +20,11 @@
             margin-bottom: 20px
             cursor: pointer
             transition: color .3s ease
+            width: fit-content
+            border-bottom: 1px solid transparent
             &:is(:hover,:active)
-                color: #fff
+                color: #BCBCBC
+                border-bottom: 1px solid #BCBCBC
     &__nav-name
         font-weight: 700
         font-size: 18px
@@ -93,3 +96,5 @@
                 margin-bottom: 30px
         &__nav-name
             font-size: 17px
+        &__btn
+            width: 100%

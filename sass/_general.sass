@@ -200,3 +200,13 @@ picture img
       & p
         font-size: 15px
         margin-top: 10px
+    .btn-with-label
+      width: 100%
+      letter-spacing: 0
+      & div
+        & svg
+          transform: scaleX(1.5) translate(10px)
+      & button
+        &:is(:hover, :active)
+          & ~ div svg
+            transform: scaleX(1.5) translate(15px)
