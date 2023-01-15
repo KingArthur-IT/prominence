@@ -2,11 +2,14 @@
     width: calc(100% + 50px)
     transform: translateX(-25px)
     flex-wrap: wrap
+    z-index: 2
 .studies-card
     padding: 0 25px
     flex-basis: 50%
     min-height: 360px
     margin-bottom: 50px
+    &:last-child
+        margin-bottom: 0
     &__hero
         height: 100%
         min-height: 360px
@@ -60,6 +63,89 @@
                 transform: rotate(-45deg) translateY(4px)
                 & path
                     fill: #fff
+.home-page-studies
+    &::before
+        content: ''
+        position: absolute
+        width: 760px
+        height: 300px
+        left: 90px
+        top: 200px
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(382px)
+        border-radius: 20px
+        transform: rotate(17deg)
+        z-index: 1
+        pointer-events: none
+    &__design-big
+        position: absolute
+        background: url('../assets/home/reviews.png') no-repeat
+        background-size: cover
+        width: 512px
+        height: 512px
+        mix-blend-mode: multiply
+        transform: rotate(-43deg)
+        left: -120px
+        top: 100px
+        pointer-events: none
+    &__design-small
+        position: absolute
+        background: url('../assets/home/reviews.png') no-repeat
+        background-size: cover
+        width: 112px
+        height: 112px
+        mix-blend-mode: multiply
+        transform: rotate(-73deg)
+        left: 57%
+        top: 54%
+        pointer-events: none
+    &__design-text
+        position: absolute
+        background: url('../assets/home/cases-text.png') no-repeat
+        background-size: cover
+        width: 330px
+        height: 245px
+        right: calc( 50vw - 720px + 90px )
+        bottom: 125px
+        pointer-events: none
+    &__design-right-top
+        position: absolute
+        background: url('../assets/home/studies-right-1.png') no-repeat
+        background-size: cover
+        width: 240px
+        height: 228px
+        right: 0
+        top: 80px
+        pointer-events: none
+        z-index: 3
+    &__design-right-bottom
+        position: absolute
+        background: url('../assets/home/studies-right-2.png') no-repeat
+        background-size: cover
+        width: 160px
+        height: 480px
+        right: 0
+        bottom: 200px
+        pointer-events: none
+        z-index: 3
+
+@media screen and (max-width: 1440px)
+    .home-page-studies
+        &__design-text
+            right: 90px
+
+@media screen and (max-width: 1340px)
+    .home-page-studies
+        &__design-small
+            left: 54%
+
+@media screen and (max-width: 1240px)
+    .home-page-studies
+        &__design-small
+            left: 50%
+            transform: translateX(-50%) rotate(-73deg)
+        &__design-text
+            right: 60px
 
 @media screen and (max-width: 1024px)
     .studies-list
@@ -68,6 +154,11 @@
     .studies-card
         padding: 0 12px
         margin-bottom: 24px
+    .home-page-studies
+        &__design-text
+            right: 30px
+        &__design-right-top
+            top: 60px
 
 @media screen and (max-width: 768px)
     .studies-list
@@ -77,6 +168,18 @@
     .studies-card
         padding: 0
         margin-bottom: 40px
+    .home-page-studies
+        &__design-small
+            display: none
+        &__design-text
+            display: none
+        &__design-right-top
+            width: 150px
+            height: 150px
+            right: 0
+            top: 80px
+        &__design-right-bottom
+            display: none
 
 @media screen and (max-width: 425px)
     .studies-card
@@ -86,3 +189,9 @@
             font-size: 14px
         &__text
             font-size: 20px
+    .home-page-studies
+        &__design-right-top
+            width: 100px
+            height: 100px
+            right: 0
+            top: 90px
