@@ -721,129 +721,6 @@ picture img {
           transform: rotate(-45deg);
 }
 
-.baner {
-  position: relative;
-  min-height: 100vh;
-  padding: 100px 0 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.baner::after {
-  content: '';
-  position: absolute;
-  width: 490px;
-  height: 620px;
-  right: -140px;
-  top: -300px;
-  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
-  -webkit-filter: blur(232px);
-          filter: blur(232px);
-  border-radius: 20px;
-  -webkit-transform: rotate(-19.96deg);
-          transform: rotate(-19.96deg);
-  z-index: -1;
-}
-
-.baner__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.baner__container {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.baner__title {
-  margin-bottom: 20px;
-  max-width: 580px;
-}
-
-.baner__subtitle {
-  font-size: 20px;
-  line-height: 1.25;
-  color: #BCBCBC;
-  margin-bottom: 50px;
-  max-width: 510px;
-}
-
-@media screen and (max-width: 1440px) {
-  .baner__img {
-    width: 56%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .baner::after {
-    right: -240px;
-    top: -400px;
-  }
-  .baner__title {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .baner__subtitle {
-    font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .baner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 0;
-  }
-  .baner__img {
-    position: relative;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
-    width: 90%;
-  }
-  .baner__title {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .baner__img {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .baner::after {
-    width: 300px;
-    height: 380px;
-    right: -60px;
-    top: -80px;
-    -webkit-filter: blur(140px);
-            filter: blur(140px);
-  }
-  .baner__btn button {
-    font-size: 15px;
-    min-width: 130px;
-  }
-  .baner__btn div {
-    font-size: 14px;
-  }
-}
-
 .menu {
   position: fixed;
   top: 0;
@@ -932,6 +809,137 @@ picture img {
 
 .menu__btn {
   width: 100%;
+}
+
+.baner {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px 0 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.baner::after {
+  content: '';
+  position: absolute;
+  width: 490px;
+  height: 620px;
+  right: -140px;
+  top: -300px;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  -webkit-filter: blur(232px);
+          filter: blur(232px);
+  border-radius: 20px;
+  -webkit-transform: rotate(-19.96deg);
+          transform: rotate(-19.96deg);
+  z-index: -1;
+}
+
+.baner__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.baner__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.baner__title {
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+
+.baner__title span {
+  background: linear-gradient(110.57deg, #176DAE -27.47%, #82E1E2 105.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.baner__subtitle {
+  font-size: 20px;
+  line-height: 1.25;
+  color: #BCBCBC;
+  margin-bottom: 50px;
+  max-width: 510px;
+}
+
+@media screen and (max-width: 1440px) {
+  .baner__img {
+    width: 56%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .baner::after {
+    right: -240px;
+    top: -400px;
+  }
+  .baner__title {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .baner__subtitle {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .baner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 0;
+  }
+  .baner__img {
+    position: relative;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    width: 90%;
+  }
+  .baner__title {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .baner__img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .baner::after {
+    width: 300px;
+    height: 380px;
+    right: -60px;
+    top: -80px;
+    -webkit-filter: blur(140px);
+            filter: blur(140px);
+  }
+  .baner__btn button {
+    font-size: 15px;
+    min-width: 130px;
+  }
+  .baner__btn div {
+    font-size: 14px;
+  }
 }
 
 .services {
@@ -2311,5 +2319,125 @@ picture img {
   }
   .studies-list-mobile .owl-stage {
     margin-left: -10px;
+  }
+}
+
+.about-us {
+  position: relative;
+}
+
+.about-us::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 75px;
+  width: 670px;
+  height: 255px;
+  background: url("../assets/googleAds/prominence-agency.png") no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.about-us::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 395px;
+  height: 290px;
+  background: url("../assets/googleAds/about-us.png") no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.about-us__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.about-us__hero {
+  max-width: 610px;
+  margin-left: auto;
+}
+
+.about-us__hero .reviews__item {
+  padding: 0;
+  z-index: 1;
+}
+
+.g-ads-about-light {
+  position: absolute;
+  width: 490px;
+  height: 490px;
+  left: -300px;
+  bottom: -150px;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  -webkit-filter: blur(267px);
+          filter: blur(267px);
+  z-index: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-us::after {
+    bottom: auto;
+    top: -80px;
+    width: 300px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .google-ads-page .about-us {
+    padding-top: 0;
+  }
+  .about-us::after {
+    width: 200px;
+    height: 140px;
+    top: -100px;
+  }
+  .about-us::before {
+    bottom: auto;
+    top: 60px;
+  }
+  .about-us__hero {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .about-us::before {
+    width: 100vw;
+    height: 38vw;
+    bottom: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .google-ads-page .about-us {
+    padding-top: 50px;
+  }
+  .about-us::after {
+    width: 150px;
+    height: 105px;
+    top: -30px;
+  }
+  .about-us::before {
+    top: 150px;
+  }
+  .about-us__title {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about-us__title {
+    max-width: 240px;
+  }
+  .about-us::before {
+    top: 140px;
   }
 }
