@@ -2193,6 +2193,24 @@ picture img {
   z-index: 3;
 }
 
+.google-ads-page .studies-card {
+  margin-bottom: 0;
+}
+
+.google-ads-page .home-page-studies__design-big {
+  background: url("../assets/googleAds/not-work.png") no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.google-ads-page .home-page-studies__design-small {
+  background: url("../assets/googleAds/not-work.png") no-repeat;
+  background-size: cover;
+  top: auto;
+  bottom: 0px;
+}
+
 @media screen and (max-width: 1440px) {
   .home-page-studies__design-text {
     right: 90px;
@@ -2298,6 +2316,12 @@ picture img {
     width: 0;
     -webkit-transition: width .3s ease;
     transition: width .3s ease;
+  }
+  .google-ads-page .home-page-studies__design-big {
+    display: none;
+  }
+  .google-ads-page .home-page-studies__design-small {
+    display: none;
   }
 }
 
@@ -2702,5 +2726,249 @@ picture img {
   .our-process-card:nth-child(4) .card__bg {
     -webkit-transform: rotate(-6deg);
             transform: rotate(-6deg);
+  }
+}
+
+.not-work {
+  position: relative;
+}
+
+.not-work::before {
+  position: absolute;
+  content: '';
+  width: 880px;
+  height: 560px;
+  left: -380px;
+  top: 0;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  -webkit-filter: blur(392px);
+          filter: blur(392px);
+  border-radius: 20px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.not-work .section__title-wrapper {
+  max-width: 370px;
+}
+
+.not-work .section__title-wrapper span {
+  background: linear-gradient(110.57deg, #176DAE -27.47%, #82E1E2 105.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.not-work__big-design {
+  position: absolute;
+  background: url("../assets/googleAds/not-work.png") no-repeat;
+  background-size: cover;
+  width: 510px;
+  height: 490px;
+  left: -200px;
+  top: 10px;
+  mix-blend-mode: multiply;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg);
+  pointer-events: none;
+}
+
+.not-work__small-design {
+  position: absolute;
+  background: url("../assets/googleAds/not-work.png") no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 230px;
+  left: 50%;
+  bottom: -40px;
+  mix-blend-mode: multiply;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  pointer-events: none;
+}
+
+.not-work__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+}
+
+.not-work__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.not-work__item:last-child {
+  margin-bottom: 0;
+}
+
+.not-work__head {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  color: #FFFFFF;
+  margin-right: 80px;
+  min-width: 250px;
+}
+
+.not-work__text {
+  font-size: 17px;
+  line-height: 1.25;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  color: #BCBCBC;
+}
+
+@media screen and (max-width: 1024px) {
+  .not-work__small-design {
+    width: 150px;
+    height: 150px;
+    bottom: 0;
+    left: auto;
+    right: 0;
+  }
+  .not-work::before {
+    width: 380px;
+    height: 260px;
+    left: -100px;
+    top: 0;
+    -webkit-filter: blur(300px);
+            filter: blur(300px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-work__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .not-work__head {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .not-work__text {
+    font-size: 15px;
+  }
+  .not-work__big-design {
+    width: 230px;
+    height: 280px;
+    left: -40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .not-work__small-design {
+    right: -50px;
+  }
+}
+
+.should-work .section__title-wrapper {
+  max-width: 440px;
+}
+
+.should-work .section__title-wrapper span {
+  background: linear-gradient(110.57deg, #176DAE -27.47%, #82E1E2 105.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  display: inline-block;
+}
+
+.should-work__text {
+  font-family: 'Bebas Neue';
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1;
+  -webkit-font-feature-settings: 'liga' off;
+          font-feature-settings: 'liga' off;
+  color: #BCBCBC;
+}
+
+.should-work__text span {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-left: 90px;
+}
+
+.should-work__ball {
+  width: 43px;
+  height: 43px;
+  display: inline-block;
+  background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+  border-radius: 50%;
+  -webkit-transform: matrix(-0.4, -0.92, -0.92, 0.4, 0, 0);
+          transform: matrix(-0.4, -0.92, -0.92, 0.4, 0, 0);
+}
+
+@media screen and (max-width: 1440px) {
+  .should-work__text span {
+    display: inline;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .should-work::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%);
+    -webkit-filter: blur(200px);
+            filter: blur(200px);
+    z-index: 1;
+  }
+  .should-work__text {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .should-work__text {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .should-work .section__title-wrapper {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  .should-work .section__title-wrapper span {
+    margin-left: 35px;
+  }
+  .should-work__text {
+    font-size: 35px;
+  }
+  .should-work__text span {
+    display: inline-block;
+    text-align: right;
+  }
+  .should-work__ball {
+    width: 24px;
+    height: 24px;
   }
 }

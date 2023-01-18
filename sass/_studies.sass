@@ -135,6 +135,20 @@
         pointer-events: none
         z-index: 3
 
+.google-ads-page
+    & .studies-card
+        margin-bottom: 0
+    & .home-page-studies__design-big
+        background: url('../assets/googleAds/not-work.png') no-repeat
+        background-size: cover
+        width: 400px
+        height: 400px
+    & .home-page-studies__design-small
+        background: url('../assets/googleAds/not-work.png') no-repeat
+        background-size: cover
+        top: auto
+        bottom: 0px
+
 @media screen and (max-width: 1440px)
     .home-page-studies
         &__design-text
@@ -209,6 +223,11 @@
                 height: 100%
                 width: 0
                 transition: width .3s ease
+    .google-ads-page
+        & .home-page-studies__design-big
+            display: none
+        & .home-page-studies__design-small
+            display: none
 
 @media screen and (max-width: 425px)
     .studies-card

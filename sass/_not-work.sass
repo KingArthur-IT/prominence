@@ -1,0 +1,103 @@
+.not-work
+    position: relative
+    &::before
+        position: absolute
+        content: ''
+        width: 880px
+        height: 560px
+        left: -380px
+        top: 0
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(392px)
+        border-radius: 20px
+        transform: rotate(-20deg)
+        z-index: 1
+        pointer-events: none
+    & .section__title-wrapper
+        max-width: 370px
+        & span
+            background: linear-gradient(110.57deg, #176DAE -27.47%, #82E1E2 105.25%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+    &__big-design
+        position: absolute
+        background: url('../assets/googleAds/not-work.png') no-repeat
+        background-size: cover
+        width: 510px
+        height: 490px
+        left: -200px
+        top: 10px
+        mix-blend-mode: multiply
+        transform: rotate(160deg)
+        pointer-events: none
+    &__small-design
+        position: absolute
+        background: url('../assets/googleAds/not-work.png') no-repeat
+        background-size: cover
+        width: 230px
+        height: 230px
+        left: 50%
+        bottom: -40px
+        mix-blend-mode: multiply
+        transform: rotate(20deg)
+        pointer-events: none
+    &__list
+        flex-direction: column
+        z-index: 1
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 50px
+        &:last-child
+            margin-bottom: 0
+    &__head
+        font-weight: 700
+        font-size: 20px
+        line-height: 1.2
+        font-feature-settings: 'liga' off
+        color: #FFFFFF
+        margin-right: 80px
+        min-width: 250px
+    &__text
+        font-size: 17px
+        line-height: 1.25
+        font-feature-settings: 'liga' off
+        color: #BCBCBC
+
+@media screen and (max-width: 1024px)
+    .not-work
+        &__small-design
+            width: 150px
+            height: 150px
+            bottom: 0
+            left: auto
+            right: 0
+        &::before
+            width: 380px
+            height: 260px
+            left: -100px
+            top: 0
+            filter: blur(300px)
+@media screen and (max-width: 768px)
+    .not-work
+        &__item
+            flex-direction: column
+            margin-bottom: 40px
+        &__head
+            margin-right: 0
+            margin-bottom: 20px
+            font-size: 18px
+        &__text
+            font-size: 15px
+        &__big-design
+            width: 230px
+            height: 280px
+            left: -40px
+
+@media screen and (max-width: 425px)
+    .not-work
+        &__small-design
+            right: -50px
