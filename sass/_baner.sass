@@ -19,11 +19,14 @@
         position: absolute
         top: 0
         right: 0
+        width: 56%
     &__container
         width: 100%
         display: flex
         align-items: center
         justify-content: flex-start
+    &__hero
+        z-index: 1
     &__title
         margin-bottom: 20px
         max-width: 580px
@@ -39,6 +42,13 @@
         color: $text-light
         margin-bottom: 50px
         max-width: 510px
+
+.meta-ads-page
+    & .baner
+        &__title
+            max-width: 715px
+        &__subtitle
+            max-width: 520px
 
 @media screen and (max-width: 1440px)
     .baner
@@ -72,6 +82,10 @@
     .baner
         &__img
             width: 100%
+    .meta-ads-page
+        & .baner
+            &__title
+                width: 100%
 
 @media screen and (max-width: 425px)
     .baner

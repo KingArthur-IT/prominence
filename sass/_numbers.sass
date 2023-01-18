@@ -1,0 +1,80 @@
+.numbers
+    position: relative
+    &::before
+        position: absolute
+        content: ''
+        width: 640px
+        height: 300px
+        left: -413px
+        top: 0
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(267px)
+        border-radius: 20px
+        transform: rotate(-20deg)
+    & .section__title-wrapper
+        max-width: 380px
+    &__list
+        justify-content: space-between
+    &__item
+        &:nth-child(2)
+            & .numbers__text
+                max-width: 185px
+        &:nth-child(3)
+            & .numbers__text
+                max-width: 230px
+    &__head
+        font-family: 'Bebas Neue'
+        font-style: normal
+        font-weight: 700
+        font-size: 80px
+        line-height: 1
+        background: linear-gradient(109.98deg, #176DAE -39.18%, #82E1E2 138.99%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+        margin-bottom: 10px
+    &__text
+        font-size: 20px
+        line-height: 1.25
+        font-feature-settings: 'liga' off
+        color: #BCBCBC
+
+@media screen and (max-width: 1024px)
+    .numbers
+        &__head
+            font-size: 72px
+        &__text
+            font-size: 18px
+
+@media screen and (max-width: 768px)
+    .numbers
+        &__list
+            flex-direction: column
+        &__item
+            align-self: center
+            margin-bottom: 40px
+            &:nth-child(2)
+                & .numbers__text
+                    max-width: 230px
+            &:nth-last-child()
+                margin-bottom: 0
+        &__head
+            font-size: 60px
+            text-align: center
+        &__text
+            font-size: 16px
+            text-align: center
+
+@media screen and (max-width: 425px)
+    .numbers
+        &::before
+            width: 260px
+            height: 260px
+            left: -130px
+            top: -100px
+            filter: blur(200px)
+        &__head
+            font-size: 50px
+        &__text
+            font-size: 15px

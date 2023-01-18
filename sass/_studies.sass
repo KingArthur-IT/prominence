@@ -114,6 +114,7 @@
         right: calc( 50vw - 720px + 90px )
         bottom: 125px
         pointer-events: none
+        opacity: 0.2
     &__design-right-top
         position: absolute
         background: url('../assets/home/studies-right-1.png') no-repeat
@@ -148,6 +149,17 @@
         background-size: cover
         top: auto
         bottom: 0px
+
+.meta-ads-page
+    & .home-page-studies
+        &__design-big
+            background: url('../assets/metaAds/process.png') no-repeat
+            background-size: cover
+        &__design-small
+            background: url('../assets/metaAds/process.png') no-repeat
+            background-size: cover
+            bottom: 100px
+            top: auto
 
 @media screen and (max-width: 1440px)
     .home-page-studies
@@ -228,6 +240,18 @@
             display: none
         & .home-page-studies__design-small
             display: none
+    .meta-ads-page
+        & .home-page-studies
+            &__design-big
+                left: auto
+                right: -200px
+                top: -100px
+            &__design-small
+                display: block
+                width: 150px
+                height: 150px
+                left: 80px
+                bottom: 0
 
 @media screen and (max-width: 425px)
     .studies-card
