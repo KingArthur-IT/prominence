@@ -141,7 +141,89 @@
         filter: blur(342px)
         border-radius: 20px
         transform: rotate(-20deg)
-    
+
+.tiktok-ads-page
+    .our-process
+        &::before
+            display: none
+        &::after
+            display: none
+        & .our-process-card
+            &__hero
+                padding-right: 50px
+            &:nth-child(2)
+                z-index: 0
+                & .our-process-card__icon
+                    transform: translateY(-40%) rotate(0deg)
+            &:nth-child(3)
+                z-index: 2
+                & .our-process-card__icon
+                    transform: translateY(-40%) rotate(-42deg)
+            &:nth-child(4)
+                z-index: 2
+                & .our-process-card__icon
+                    transform: translateY(-40%) rotate(0deg)
+        &__big-design
+            position: absolute
+            background: url('../assets/tiktokAds/ball.png') no-repeat
+            background-size: cover
+            width: 350px
+            height: 350px
+            left: 150px
+            top: 30%
+            mix-blend-mode: multiply
+            transform: rotate(-10deg)
+        &__small-design
+            position: absolute
+            background: url('../assets/tiktokAds/ball.png') no-repeat
+            background-size: cover
+            width: 240px
+            height: 240px
+            right: 340px
+            bottom: 0
+            mix-blend-mode: multiply
+            transform: rotate(42deg)
+        &__light
+            position: absolute
+            width: 1280px
+            height: 420px
+            right: -300px
+            top: 100px
+            background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+            filter: blur(342px)
+            transform: rotate(-20deg)
+        &__list-bg
+            position: absolute
+            background: url('../assets/tiktokAds/process/bg.png') no-repeat
+            background-size: cover
+            width: 50vw
+            height: 43vw
+            top: 0
+            right: calc(720px - 50vw - 90px)
+            transform: translateY(-20%)
+            z-index: 1
+            pointer-events: none
+
+@media screen and (max-width: 1400px)    
+    .tiktok-ads-page
+        .our-process
+            &__list-bg
+                right: - 90px
+
+@media screen and (max-width: 1340px)
+    .tiktok-ads-page
+        .our-process
+            &__list-bg
+                width: 60vw
+                height: 60vw
+
+@media screen and (max-width: 1240px)
+    .tiktok-ads-page
+        .our-process
+            &__list-bg
+                width: 66vw
+                height: 60vw
+
 @media screen and (max-width: 1024px)
     .our-process-card
         padding: 0
@@ -176,6 +258,15 @@
     .our-process
         &::after
             bottom: 0px
+    .tiktok-ads-page
+        .our-process
+            & .our-process-card
+                &__hero
+                    padding-right: 30px
+                &:nth-child(2)
+                    z-index: 2
+                &:nth-child(3)
+                    z-index: 0
 
 @media screen and (max-width: 768px)
     .our-process
@@ -184,6 +275,30 @@
             height: 160px
             bottom: 50px
             right: -35px
+    .tiktok-ads-page
+        .our-process
+            &__big-design
+                width: 290px
+                height: 290px
+                top: -50px
+                right: -100px
+                left: auto
+            &__small-design
+                width: 125px
+                height: 125px
+                right: auto
+                left: 0
+            &__light
+                width: 450px
+                height: 1000px
+                filter: blur(257px)
+                transform: rotate(-13.42deg)
+            &__list-bg
+                right: auto
+                left: 0
+                top: 170px
+                width: 280px
+                height: 280px
 
 @media screen and (max-width: 425px)
     .our-process
@@ -229,3 +344,7 @@
             top: 300px
             right: -100px
             filter: blur(300px)
+    .tiktok-ads-page
+        .our-process
+            &__list-bg
+                top: 220px

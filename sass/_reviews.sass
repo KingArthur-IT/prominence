@@ -71,6 +71,19 @@
     &__more-btn
         display: none
 
+.tiktol-page-reviews
+    &::before
+        content: ''
+        position: absolute
+        width: 700px
+        height: 445px
+        left: -274px
+        top: 0
+        background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+        filter: blur(372px)
+        border-radius: 20px
+        transform: rotate(-20deg)
+
 @media screen and (max-width: 1240px)
     .reviews
         &__list
@@ -151,4 +164,16 @@
                 width: 16px
         &__text
             font-size: 15px
-        
+    .tiktol-page-reviews
+        &::before
+            content: ''
+            position: absolute
+            width: 340px
+            height: 400px
+            left: auto
+            right: -220px
+            top: 0
+            background: linear-gradient(103.66deg, #176DAE 6.84%, #82E1E2 94.52%)
+            filter: blur(372px)
+            border-radius: 20px
+            transform: rotate(-20deg)
